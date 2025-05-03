@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinder Bot Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="header">
+        <h2>Tinder Bot Dashboard</h2>
+        <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+    </div>
+
+    <form method="POST">
+        <label for="swipes">Number of Right Swipes:</label>
+        <input type="number" id="swipes" name="swipes" min="1" max="500" required>
+
+        <button type="submit">Start Bot</button>
+    </form>
+</body>
+</html>
